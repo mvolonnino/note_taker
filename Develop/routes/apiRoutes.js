@@ -1,4 +1,4 @@
-const dbJSON = require("../db/db.json");
+let dbJSON = require("../db/db.json");
 
 console.log("dbJSON: ", dbJSON);
 
@@ -14,5 +14,11 @@ module.exports = function (app) {
     console.log("req.body: ", req.body);
     dbJSON.push(req.body);
     res.json(true);
+  });
+
+  app.post("/api/clear", function (req, res) {
+    dbJSON = [];
+
+    res.json({ cleared: true, dbJSON });
   });
 };
