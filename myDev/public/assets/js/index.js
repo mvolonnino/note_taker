@@ -1,3 +1,4 @@
+console.log("index.js: Matt, your the man");
 const $noteTitle = $(".note-title");
 const $noteText = $(".note-textarea");
 const $saveNoteBtn = $(".save-note");
