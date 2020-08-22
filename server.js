@@ -15,8 +15,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set up ROUTES to map through our HTML and backened API
-require("./mydev/routes/apiRoutes")(app);
-require("./mydev/routes/htmlRoutes")(app);
+require("./myDev/routes/apiRoutes")(app);
+require("./myDev/routes/htmlRoutes")(app);
 
 // Listener
 app.listen(PORT, function () {
